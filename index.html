@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140812593-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-140812593-2');
+	</script>
+	<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+	<script type="text/javascript">
+		  kakaoPixel('7155327146440081503').pageView();
+	</script>
+	<!-- Global site tag (gtag.js) - Google Ads: 739847195 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-739847195"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'AW-739847195');
+	</script>
+
+    <title>UNIX</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<link rel="icon" type="image/png" href="./images/unix_favi.ico">
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="./js/design.js"></script>	
+	<script type="text/javascript">
+		function videoBox(){
+			var dWidthT = $(window).width();
+			var wHeight = $(window).height();
+			$(".sec4 .slide").css("width",dWidthT);
+			$(".sec4 .slide .sl img").css("height",wHeight);
+			$('.section .vcov').css("width",dWidthT);
+			$('.section .vcov').css("height",wHeight);
+			
+			var guW = $('.section .inguidimg').width();
+			var guH = $('.section .inguidimg').height();
+			var viW = $('.section .bg_video').width();
+			var viH = $('.section .bg_video').height();
+
+			var vwb = (guW / 2);
+			var vhb = (guH / 2);
+			var videoWm = (viW / 2);
+			var videoHm = (viH / 2);
+			guH = wHeight;
+			//console.log("화면w : "+ dWidthT+", 화면h : "+wHeight);
+			//console.log("가이드w : "+ guW+", 가이드h : "+guH);
+
+			if (dWidthT > guW){	
+				//console.log("이미지 작아");
+
+				$('.section .bg_video').css("width",dWidthT);
+				$('.section .bg_video').css("height","auto");
+				$('.section .bg_video').css("margin-left",videoWm*-1);
+				$('.section .bg_video').css("top","50%");
+				$('.section .bg_video').css("margin-top",videoHm*-1);
+
+			} else if (dWidthT < guW){
+				//console.log("이미지 커");
+
+				$('.section .bg_video').css("width",guW);
+				$('.section .bg_video').css("margin-left",vwb*-1);
+				$('.section .bg_video').css("top","0");
+				$('.section .bg_video').css("margin-top","0");
+
+			} else {
+				console.log("그외");
+			}
+		}
+
+		function videoBox_df(){
+			var dWidth = $(window).width();
+			dWidth = dWidth;
+			var wHeight = $(window).height();
+			$(".sec4 .slide").css("width",dWidth);
+			$(".sec4 .slide .sl img").css("height",wHeight);
+
+			var guW = $('.section .guidimg').width();
+			var se1H = $('.section .bg_video').height();
+			var wwb = parseInt(dWidth / 2);
+			var vwb = parseInt(guW / 2);
+			var vhb = parseInt(se1H / 2);
+
+			$('.section .vcov').css("width",dWidth);
+			$('.section .vcov').css("height",wHeight);
+			$('.section .vcov').css("width",dWidth);
+
+			if (guW < dWidth){				
+				$('.section .bg_video').css("width",dWidth);
+				$('.section .bg_video').css("height","auto");
+				$('.section .bg_video').css("margin-left",wwb*-1);
+
+				se1H = $('.section .bg_video').height();
+				vhb = parseInt(se1H / 2);
+
+				if (se1H < wHeight){	
+					return false;
+				} else {
+					$('.section .bg_video').css("top","50%");
+					$('.section .bg_video').css("margin-top",vhb*-1);
+				}				
+
+			} else if (guW >= dWidth){
+				$('.section .bg_video').css("width","auto");
+				$('.section .bg_video').css("height",wHeight);
+				$('.section .bg_video').css("margin-left",vwb*-1);
+
+				if (se1H < wHeight){				
+					$('.section .bg_video').css("top","0");
+					$('.section .bg_video').css("margin-top","0");
+				} else {
+					return false;
+				}
+			} 
+		}
+
+		$(document).ready(function() {
+			var dWidthT = $(window).width();
+			var wHeight = $(window).height();
+
+			$(".menu > ul > li.tos").click(function(){
+				$(".menu").removeClass("on");
+				$(".header").removeClass("on");
+				$('.container').off('scroll touchmove mousewheel');				
+			});
+
+			$(window).on('resize',function(){
+				//videoBox();
+			});
+	    });
+    </script>
+</head>
+<body>
+<div class="container main">
+	<!-- header -->
+	<div class="header">
+		<h1 class="logo"><a href="./index.html" alt="TAKE OUT 4"></a></h1>
+		<a href="javascript:void(0);" class="mobbtn addbtn"></a>
+		<div class="rightbtn">
+			<a href="https://www.youtube.com/channel/UC6wYXv6ZEb406EXhjVlDMdQ" target="_blank" class="utb" alt="utub"></a><a href="https://www.instagram.com/unixelec/" target="_blank" class="instar" alt="instargram"></a>
+		</div>
+
+		<a href="javascript:void(0);" class="mobbtn openmenu"></a>		
+		<div class="menu">
+			<a href="javascript:void(0);" class="closebtn"></a>
+			<ul>
+				<li class="tos"><a href="./index.html#page2"><span>TAKE OUT STORY</span></a></li>
+				<li><a href="./product.html"><span>THE BETTER IRON</span></a></li>
+				<li>
+					<a href="./product_sub01.html"><span>PRODUCT</span></a>
+					<div class="sub">
+						<ul>
+							<li><a href="./product_sub01.html">FLAT</a></li>
+							<li><a href="./product_sub02.html">MULTI FLAT</a></li>
+							<li><a href="./product_sub03.html">ROUND</a></li>
+							<li><a href="./product_sub04.html">MULTI ROUND</a></li>
+							<li><a href="./product_sub05.html">BRUSH</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="./event.html"><span>EVENT</span></a></li>
+				<li><a href="./review.html"><span>REVIEW</span></a></li>
+			</ul>
+			<div class="bottom">
+				<h2>© 2020 UNIX.</h2>
+				<span class="mrightbtn"><a href="#" target="_blank" class="utb" alt="utub"></a><a href="#" target="_blank" class="instar" alt="instargram"></a></span>
+			</div>
+		</div>
+		<div class="blackbg"></div>
+	</div>
+
+	<!-- contants -->
+	<div id="fullpage">
+	    <div class="section sec1">
+			<div class="vcov">
+				<video id ="movie1" class="bg_video web" autoplay="autoplay" width="auto" height="100%" poster="" muted="muted" loop="loop" title="" webkit-playsinline="" playsinline=""  >
+					<source src="./images/main/unix_kv.mp4" type="video/mp4" />
+				</video>
+				<video id ="movie2" class="bg_video mob" autoplay="autoplay" width="auto" height="100%" poster="" muted="muted" loop="loop" title="" webkit-playsinline="" playsinline=""  >
+					<source src="./images/main/unix_kv_m.mp4" type="video/mp4" />
+				</video>
+			</div>
+			<div class="layer">
+				<h2><span>TAKE OUT 4</span><span class="dff">THE BETTER</span></h2>
+				<p>너를 위한 어떤 것도 <span>포기하지마</span></p>
+			</div>
+			<a href="javascript:void(0);" class="downbtn"></a>
+	    </div>
+	    <div class="section sec2">
+			<div class="vcov">
+				<video id ="movie3" class="bg_video web" autoplay="autoplay" width="auto" height="100%" poster="" muted="muted" loop="loop" title="" webkit-playsinline="" playsinline=""  >
+					<source src="./images/main/unix_flat.mp4" type="video/mp4" />
+				</video>
+				<video id ="movie4" class="bg_video mob" autoplay="autoplay" width="auto" height="100%" poster="" muted="muted" loop="loop" title="" webkit-playsinline="" playsinline=""  >
+					<source src="./images/main/unix_flat_m.mp4" type="video/mp4" />
+				</video>
+			</div>
+	    	<div class="layer">
+	    		<h2><span>Take Out Story</span><br/>ACTISUAL <strong>ITEM</strong></h2>
+				<p>액티주얼은 Active에 Visual이 더해진 <span>테이크아웃 4의 브랜드 가치이다.</span><br/>테이크아웃 4는 언제 어디서든 나만의 비주얼을 <span>완성시키기 위한 수단이자 나아가</span><br/>비주얼 라이프 리더라는 새로운 타이틀을 얻게 될 <span>액티주얼 아이템이다.</span></p>
+	    	</div>
+			<div class="buidbox">
+				<img src="./images/main/main_sec1_movieblank2.png" alt="" class="guidimg" />
+			</div>
+	    </div>
+		<div class="section sec3">
+	    	<div class="layer">
+	    		<div class="cover">
+					<h2>자발적 빌런에 대한 <span>이야기</span></h2>
+					<p>빌런이라고 하지만 악당에 대한 이야기는 아니다.<br/>다만 억압을 벗어던지고 내 안의 뜨거운 욕망을 <span>억누르는 것을 멈추자는 이야기다.</span><br/>가능성, 도전, 두근거림, 당당함은 <span>나를 나로서 표출할 때 발현될 수 있는</span><br/> 가장 가치 있는 삶의 원천이기 때문이다.</p>
+				</div>
+	    	</div>
+	    </div>
+		<div class="section sec4">
+	    	<div class="layer">
+	    		<div class="cover">
+					<p>오늘 내가 보낸 일상의 방식은 <span class="bl">소셜 미디어를 통해</span> <em><span>나를 표현하는 방법이 되기도 하고,</span> <span>주변 사람들과 소통하고 싶은</span> <span>스토리가 되기도 한다.</span></em>테이크아웃 4로 인해 헤어스타일을 넘어 <span>내 삶의 패턴을 변화시키고</span><br/> 더 멋진 라이프 리더로 거듭날 <span>그 순간을 기대해본다.</span></p>
+				</div>
+	    	</div>
+	    </div>
+		<div class="section sec5">
+	    	<div class="layer">
+	    		<div class="cover">
+					<p>너만의 것을 찾아봐.<br/>너의 가능성을 열어둬.<br/>언제나 당당하게.<br/>우리에게 불가능은 없어.<br/>우리만의 이야기를 시작하자.</p>
+				</div>
+	    	</div>
+	    </div>
+		<div class="section sec6">
+	    	<div class="layer">
+	    		<div class="cover">
+					<h2><span>TAKE OUT 4</span><span class="dff">THE BETTER</span></h2>
+					<p>너를 위한 어떤 것도 <span>포기하지마</span></p>	
+				</div>
+	    	</div>
+			<a href="javascript:void(0);" class="topbtn">맨 위로</a>
+	    </div>	
+	</div>
+
+	<!-- footer -->
+	<div class="footer">
+		<div class="inner">
+			<div class="top">
+				<h1>© 2020 UNIX.</h1>
+				<p><a href="https://www.youtube.com/channel/UC6wYXv6ZEb406EXhjVlDMdQ" target="_blank" class="utb" alt="utub"></a><a href="https://www.instagram.com/unixelec/" target="_blank" class="instar" alt="instargram"></a></p>
+			</div>
+			<ul class="txtarea">
+				<li>서울 사무소 <br/>서울시 용산구 원효로 252 유닉스 빌딩</li>
+				<li>김포 공장<br/>경기도 김포시 양촌읍 황금로 89번길 80<br/>유닉스전자㈜</li>
+				<li><strong>고객지원(A/S) 1577-0569</strong></li>
+			</ul>
+		</div>
+	</div>	
+</div>
+
+
+<script type="text/javascript">
+
+	/*세로페이지 슬라이드*/
+	function initialization(){
+		//var a = 1;
+		//var scrollEvent = true;
+		$('#fullpage').fullpage({
+			verticalCentered: false,
+			css3: true,
+			anchors:['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+			//navigation: true,
+			//slidesNavigation: true,
+			afterLoad: function(anchorLink, index){
+
+				if(index == 2){
+					$(".header .menu > ul > li:nth-child(1)").addClass("active");
+				} else {
+					$(".header .menu > ul > li:nth-child(1)").removeClass("active");
+				}
+
+				if(index == 1 || index == 2){
+					var webVideo1 = document.getElementById("movie1");
+					var webVideo2 = document.getElementById("movie2");
+					var webVideo3 = document.getElementById("movie3");
+					var webVideo4 = document.getElementById("movie4");
+
+					webVideo1.play();
+					webVideo2.play();
+					webVideo3.play();
+					webVideo4.play();
+					//mobVideo.play();
+				}
+				/*
+				if(index == 4){
+					scrollEvent = false;
+
+					$("html,body").on("mousewheel",function(c){
+						c.preventDefault();
+						var m = c.originalEvent.wheelDelta;
+
+						if (m > 1 && scrollEvent == false){
+							//console.log("올림");
+							$(".footer").removeClass("up");
+						} else if (m < 1 && scrollEvent == false){
+							//console.log("내림");
+							$(".footer").addClass("up");
+						}
+					});
+
+				} else {
+					scrollEvent = true;
+					return false;
+				}
+				*/
+			}
+		});
+	}
+	
+	$(document).ready(function() { 
+		initialization();	//세로페이지 슬라이드
+
+		$('.header .menu > ul > li:nth-child(1)').click(function(e){
+			$.fn.fullpage.moveTo(2);
+		});
+
+		$('.downbtn').click(function(e){
+			$.fn.fullpage.moveTo(2);
+		});
+		$('.topbtn').click(function(e){
+			$.fn.fullpage.moveTo(1);
+		});
+	});	
+</script>
+</body>
+</html>

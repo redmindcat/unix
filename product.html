@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-140812593-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-140812593-2');
+	</script>
+	<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+	<script type="text/javascript">
+		  kakaoPixel('7155327146440081503').pageView();
+	</script>
+	<!-- Global site tag (gtag.js) - Google Ads: 739847195 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-739847195"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'AW-739847195');
+	</script>
+
+    <title>UNIX</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<link rel="icon" type="image/png" href="./images/unix_favi.ico">
+	<link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css"> 
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="./js/design.js"></script>
+	<script type="text/javascript" src="./js/prd_ani.js"></script>
+	<script type="text/javascript">
+		history.scrollRestoration="manual"
+
+		var dWidth = $(window).width();
+		var wHeight = $(window).height();
+
+		/*기기확인*/
+		function isMobile(){
+			var UserAgent = navigator.userAgent;
+			if (UserAgent.match(/iPhone|iPod|Android|Windows CE|BlackBerry|Symbian|Windows Phone|webOS|Opera Mini|Opera Mobi|POLARIS|IEMobile|lgtelecom|nokia|SonyEricsson/i) != null || UserAgent.match(/LG|SAMSUNG|Samsung/) != null){
+				return true;
+			}else{
+				return false;
+			}
+		}		
+
+		$(document).ready(function() {	
+			$(window).scrollTop();
+			$(".yellow .sec01 .scrollico").hide();
+			setTimeout(function(){
+				$(".yellow .sec01 .vcov video").fadeOut();
+			},3000);
+
+			setTimeout(function(){
+				$(".yellow .sec01 .scrollico").fadeIn();
+
+				setTimeout(function(){
+					$(".yellow .sec01 .scrollico").fadeOut();
+				},2000);
+			},4000);
+
+			/*기기확인*/
+			if(isMobile()){
+				$(".container").addClass("mobile");
+				//alert("모바일");
+			}else{
+				$(".container").addClass("pc");
+				//alert("pc");
+			}
+
+			/*하단네비*/
+			$(".btnav").click(function(){
+				$(".btnavbox").addClass("on");
+
+				if ($(this).parent().hasClass("mobile")){
+					$(".alldim").fadeIn();
+				}				
+			});
+			$(".alldim").click(function(){
+				$(".btnavbox").removeClass("on");
+				$(".alldim").fadeOut();
+			});
+			$(".aniallbox").click(function(){
+				$(".btnavbox").removeClass("on");
+			});
+
+			/*하단 롤링 슬라이드*/
+			$(function(){
+				$('.slidebox').bxSlider({
+					mode: 'vertical',
+					hideControlOnEnd: true,
+					pager: false,
+					adaptiveHeight:true,
+					auto: true, 
+					speed: 500, 
+					pause: 3000 
+				});
+			});
+
+			scrollani();
+	    });
+    </script>
+</head>
+<body class="scrn">
+<div class="container product">
+	<!-- header -->
+	<div class="header">
+		<h1 class="logo"><a href="./index.html" alt="TAKE OUT 4"></a></h1>
+		<a href="javascript:void(0);" class="mobbtn addbtn"></a>
+		<div class="rightbtn">
+			<a href="https://www.youtube.com/channel/UC6wYXv6ZEb406EXhjVlDMdQ" target="_blank" class="utb" alt="utub"></a><a href="https://www.instagram.com/unixelec/" target="_blank" class="instar" alt="instargram"></a>
+		</div>
+
+		<a href="javascript:void(0);" class="mobbtn openmenu"></a>		
+		<div class="menu">
+			<a href="javascript:void(0);" class="closebtn"></a>
+			<ul>
+				<li><a href="./index.html#page2"><span>TAKE OUT STORY</span></a></li>
+				<li class="active"><a href="./product.html"><span>THE BETTER IRON</span></a></li>
+				<li>
+					<a href="./product_sub01.html"><span>PRODUCT</span></a>
+					<div class="sub">
+						<ul>
+							<li><a href="./product_sub01.html">FLAT</a></li>
+							<li><a href="./product_sub02.html">MULTI FLAT</a></li>
+							<li><a href="./product_sub03.html">ROUND</a></li>
+							<li><a href="./product_sub04.html">MULTI ROUND</a></li>
+							<li><a href="./product_sub05.html">BRUSH</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="./event.html"><span>EVENT</span></a></li>
+				<li><a href="./review.html"><span>REVIEW</span></a></li>
+			</ul>
+			<div class="bottom">
+				<h2>© 2020 UNIX.</h2>
+				<span class="mrightbtn"><a href="https://www.youtube.com/channel/UC6wYXv6ZEb406EXhjVlDMdQ" target="_blank" class="utb" alt="utub"></a><a href="https://www.instagram.com/unixelec/" target="_blank" class="instar" alt="instargram"></a></span>
+			</div>
+		</div>
+		<div class="blackbg"></div>
+	</div>
+
+	<!-- contants -->
+	<div class="aniallbox">
+		<!-- 옐로우 -->
+		<div class="bigsec yellow">
+			<div class="section sec01">
+				<div class="vcov">
+					<video class="movie web" autoplay="autoplay" poster="./images/product/product_main_yellow_movpster_pc.jpg" muted="muted" title="" webkit-playsinline="" playsinline=""  >
+						<source src="./images/product/pdt_main_kv_pc.mp4" type="video/mp4" />
+					</video>
+					<video class="movie mob" autoplay="autoplay" poster="" muted="muted" title="" webkit-playsinline="" playsinline=""  >
+						<source src="./images/product/pdt_main_kv_m.mp4" type="video/mp4" />
+					</video>
+				</div>
+				<div class="txtbox">				
+					<h2><span>REAL ACTIVE &amp; WIRELESS</span>리얼 액티브<br/>완벽한 무선</h2>
+					<span class="sqtxt">Take Out 4 Series</span>
+				</div>
+				<span class="dim"></span>
+				<span class="scrollico"></span>
+			</div>
+			<div class="section sec02">
+				<div class="imgbox">
+					<img src="./images/product/product_main_blank_m.png" />
+					<img src="./images/product/product_main_blank_m.png" />
+				</div>
+				<div class="txtbox">
+					<p>외부 사용에 최적화 된 <br/>완전 무선 방식으로 <br/>충전이 간편하고 사용시 환경에 <br/>제약을 받지 않습니다.</p>
+				</div>
+				<span class="dim"></span>
+			</div>			
+		</div>
+
+		<!-- 딥블루 -->
+		<div class="bigsec deepblue">
+			<div class="section sec01">
+				<div class="imgbox"><img src="./images/product/product_main_blank_m.png" /></div>	
+			</div>
+			<div class="section sec02">
+				<div class="imgbox">
+					<img src="./images/product/product_main_blank_m.png" />
+					<span class="left"></span>
+					<span class="right"></span>
+				</div>	
+			</div>
+			<span class="dim"></span>
+			<div class="txtbox">
+				<h2>5<span>MIN.</span></h2>
+				<p>액티브한 활동을 즐긴 뒤 <br/>테이크아웃 4로 스타일링 터치까지 <br/>걸리는 시간은 단 5분이면 <br/>충분합니다.</p>
+			</div>
+		</div>
+
+		<!-- 딥핑크 -->
+		<div class="bigsec deeppink">
+			<div class="section sec01">
+				<div class="imgbox">
+					<img src="./images/product/product_main_blank_m.png" />
+					<!--<span class="front"></span>-->
+					<span class="back"></span>
+				</div>
+				<div class="txtbox">
+					<h2><span>PORTABLE &amp; EASY</span>휴대성과 사용성<br/>두 마리 토끼</h2>
+				</div>
+				<span class="dim"></span>
+			</div>
+			<div class="section sec02">
+				<div class="imgbox">
+					<img src="./images/product/product_main_blank_m.png" />
+				</div>
+				<div class="txtbox">
+					<p>사이즈와 무게는 <br/>늘 가지고 다녀도 부담스럽지 않되 <br/>발열 온도는 높여 <br/>휴대와 외부 스타일링의 <br/>균형을 맞췄습니다.</p>
+				</div>
+				<span class="dim"></span>
+			</div>
+		</div>
+
+		<!-- 파스텔핑크 -->
+		<div class="bigsec pink">
+			<div class="section sec01">
+				<div class="imgbox"><img src="./images/product/product_main_blank_m.png" /></div>
+				<div class="txtbox">
+					<h2><span>ACTIVE + VISUAL ITEM</span>꺼내는 순간<br/>반하는 디자인</h2>
+				</div>
+				<span class="dim"></span>
+			</div>
+			<div class="section sec02">
+				<div class="imgbox">
+					<img src="./images/product/product_main_blank_m.png" />
+					<img src="./images/product/product_main_blank_m.png" />
+				</div>
+				<div class="txtbox">
+					<p>사용자의 Out Fit에 <br/>방해 되지 않는 <br/>명료하고 군더더기 없는 <br/>디자인에 감각적이고 <br/>힙한 감성을 더했습니다.</p>
+				</div>
+				<span class="dim"></span>
+			</div>
+			<div class="section sec03">
+				<div class="imgbox"><img src="./images/product/product_main_blank_m.png" /></div>
+				<div class="txtbox">
+					<p>무엇을 하든 어디에 있든 <br/>언제든 꺼내 비주얼을 완성하기 위해서 <br/>외부로 나가기 전 반드시 챙겨야 할 <br/>필수불가결한 요소입니다.</p>
+				</div>
+				<span class="dim"></span>
+			</div>
+		</div>
+
+		<!-- 파스텔블루 -->
+		<div class="bigsec blue">
+			<div class="section sec01">
+				<div class="imgbox"><img src="./images/product/product_main_blank_m.png" /></div>
+				<div class="txtbox">
+					<h2><span>COLOR &amp; DESIGN</span>이런 컬러<br/>이런 디자인</h2>
+				</div>
+				<span class="dim"></span>
+			</div>
+			<div class="section sec02">
+				<div class="imgbox">
+					<img src="./images/product/product_main_blank_m.png" />
+					<img src="./images/product/product_main_blank_m.png" />
+				</div>
+				<div class="txtbox">
+					<p>테이크아웃 4는 <br/>헤어 기기와 스타일 아이템의 <br/>경계를 허물어뜨리고 <br/>언제 어디에 놓여있어도 <br/>톡톡 튀는 멋스러움을 <br/>선보입니다.</p>
+				</div>
+				<span class="dim"></span>
+			</div>
+		</div>
+		
+		<!-- 딥핑크 가방-->
+		<div class="dpfront">
+			<span class="front"></span>
+		</div>
+	</div>
+
+	<!-- bottom nav -->
+	<div class="btnav nv">
+		<div class="inner">
+			<div class="slidebox">
+				<div class="leftinfo">
+					<span class="cround ye"></span>
+					<h2>FLAT</h2>
+					<p><span>UCI-A2021</span><span>LEMON YELLOW</span><span>STRAIGHT</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround bl"></span>
+					<h2>MULTI FLAT</h2>
+					<p><span>UCI-A2023</span><span>GALAXY BLUE</span><span>STRAIGHT &amp; WAVE</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround re"></span>
+					<h2>ROUND</h2>
+					<p><span>UCI-A2025</span><span>CARROT RED</span><span>WAVY</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround pi"></span>
+					<h2>MULTI ROUND</h2>
+					<p><span>UCI-A2026</span><span>BUNNY PINK</span><span>STRONG WAVY</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround lb"></span>
+					<h2>BRUSH</h2>
+					<p><span>UCI-A2027</span><span>MELLOW LAVENDAR</span><span>VOLUME</span></p>
+				</div>
+			</div>
+			<span class="navbtn"></span>
+		</div>
+		<span class="rolcover"></span>
+	</div>
+
+	<!-- bottom navbox -->
+	<div class="btnavbox nv">
+		<div class="inner">
+			<ul>
+				<li><a href="./product_sub01.html">
+					<span class="cround ye"></span>
+					<h2>FLAT</h2>
+					<p><span>UCI-A2021</span><span>LEMON YELLOW</span><span>STRAIGHT</span></p>
+				</a></li>
+				<li><a href="./product_sub02.html">
+					<span class="cround bl"></span>
+					<h2>MULTI FLAT</h2>
+					<p><span>UCI-A2023</span><span>GALAXY BLUE</span><span>STRAIGHT &amp; WAVE</span></p>
+				</a></li>
+				<li><a href="./product_sub03.html">
+					<span class="cround re"></span>
+					<h2>ROUND</h2>
+					<p><span>UCI-A2025</span><span>CARROT RED</span><span>WAVY</span></p>
+				</a></li>
+				<li><a href="./product_sub04.html">
+					<span class="cround pi"></span>
+					<h2>MULTI ROUND</h2>
+					<p><span>UCI-A2026</span><span>BUNNY PINK</span><span>STRONG WAVY</span></p>
+				</a></li>
+				<li><a href="./product_sub05.html">
+					<span class="cround lb"></span>
+					<h2>BRUSH</h2>
+					<p><span>UCI-A2027</span><span>MELLOW LAVENDAR</span><span>VOLUME</span></p>
+				</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="alldim"></div>
+</div>
+</body>
+</html>

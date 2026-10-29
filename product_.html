@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>UNIX</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="./css/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="./css/style.css"> 
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="./js/design.js"></script>
+	<script type="text/javascript">
+		function topmargin(){
+		}
+
+		$(document).ready(function() {	
+			$(".btnav").click(function(){
+				$(".btnavbox").addClass("on");
+			});
+			$(".promain").click(function(){
+				$(".btnavbox").removeClass("on");
+			});
+
+			$(function(){
+				$('.slidebox').bxSlider({
+					mode: 'vertical',
+					hideControlOnEnd: true,
+					pager: false,
+					adaptiveHeight:true,
+					auto: true, 
+					speed: 500, 
+					pause: 3000 
+				});
+			});
+
+			$(window).scroll(function(){
+			});	
+
+			$(window).on('resize',function(){
+			});
+	    });
+
+		var scrollEvent = false;
+		var count = 0;
+
+		$("html,body").on("mousewheel",function(c){
+			c.preventDefault();
+			var m = c.originalEvent.wheelDelta;
+
+			if (m > 1 && scrollEvent == false && count >=1){
+				console.log("올림 : " + count);
+				scrollEvent = true;
+				count--;
+				$(".promain").css("background-image","url(../images/product/ani/product_main_scrollimg_"+count+".png)");
+				scrollEvent = false;
+			} else if (m < 1 && scrollEvent == false && count < 3000){
+				console.log("내림 : " +count);
+				scrollEvent = true;
+				count++;
+
+				setTimeout(function() { 
+				}, 1000);
+
+				$(".promain").css("background-image","url(../images/product/ani/product_main_scrollimg_"+count+".png)");
+				scrollEvent = false;
+			}
+		});
+    </script>
+</head>
+<body>
+<div class="container product">
+	<!-- header -->
+	<div class="header">
+		<h1 class="logo"><a href="./index.html">TAKE OUT 4</a></h1>
+		<a href="javascript:void(0);" class="mobbtn addbtn"></a>
+		<div class="rightbtn">
+			<a href="#" target="_blank" class="utb" alt="utub"></a><a href="#" target="_blank" class="instar" alt="instargram"></a>
+		</div>
+
+		<a href="javascript:void(0);" class="mobbtn openmenu"></a>		
+		<div class="menu">
+			<a href="javascript:void(0);" class="closebtn"></a>
+			<ul>
+				<li data-menuanchor="page2"><a href="./index.html#page2"><span>TAKE OUT STORY</span></a></li>
+				<li class="active">
+					<a href="./product.html"><span>PRODUCT</span></a>
+					<div class="sub">
+						<ul>
+							<li><a href="./product_sub01.html">FLAT</a></li>
+							<li><a href="#">MULTI FLAT</a></li>
+							<li><a href="#">ROUND</a></li>
+							<li><a href="#">MULTI ROUND</a></li>
+							<li><a href="#">BRUSH</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="./event.html"><span>EVENT</span></a></li>
+				<li><a href="./review.html"><span>REVIEW</span></a></li>
+			</ul>
+			<div class="bottom">
+				<h2>© 2020 UNIX.</h2>
+				<span class="mrightbtn"><a href="#" target="_blank" class="utb" alt="utub"></a><a href="#" target="_blank" class="instar" alt="instargram"></a></span>
+			</div>
+		</div>
+		<div class="blackbg"></div>
+	</div>
+
+	<!-- contants -->
+	<div class="promain">
+		<!--<img src="./images/product/product_main_blank.png" alt="" />-->
+	</div>
+
+	<!-- bottom nav -->
+	<div class="btnav nv">
+		<div class="inner">
+			<div class="slidebox">
+				<div class="leftinfo">
+					<span class="cround ye"></span>
+					<h2>FLAT</h2>
+					<p><span>UCI-A2021</span><span>LEMON YELLOW</span><span>STRAIGHT</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround bl"></span>
+					<h2>MULTI FLAT</h2>
+					<p><span>UCI-A2022</span><span>CLASSIC BLUE</span><span>STRAIGHT &amp; CURL</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround re"></span>
+					<h2>ROUND</h2>
+					<p><span>UCI-A2023</span><span>CARROT RED</span><span>WAVY</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround pi"></span>
+					<h2>MULTI ROUND</h2>
+					<p><span>UCI-A2027</span><span>GRAY PINK</span><span>WAVE &amp; ROLL</span></p>
+				</div>
+				<div class="leftinfo">
+					<span class="cround lb"></span>
+					<h2>BRUSH</h2>
+					<p><span>UCI-A2025</span><span>BLUE VIOLET</span><span>VOLUME</span></p>
+				</div>
+			</div>
+			<span class="navbtn"></span>
+		</div>
+	</div>
+
+	<!-- bottom navbox -->
+	<div class="btnavbox nv">
+		<div class="inner">
+			<ul>
+				<li><a href="./product_sub01.html">
+					<span class="cround ye"></span>
+					<h2>FLAT</h2>
+					<p><span>UCI-A2021</span><span>LEMON YELLOW</span><span>STRAIGHT</span></p>
+				</a></li>
+				<li><a href="./product_sub02.html">
+					<span class="cround bl"></span>
+					<h2>MULTI FLAT</h2>
+					<p><span>UCI-A2022</span><span>CLASSIC BLUE</span><span>STRAIGHT &amp; CURL</span></p>
+				</a></li>
+				<li><a href="./product_sub03.html">
+					<span class="cround re"></span>
+					<h2>ROUND</h2>
+					<p><span>UCI-A2023</span><span>CARROT RED</span><span>WAVY</span></p>
+				</a></li>
+				<li><a href="./product_sub04.html">
+					<span class="cround pi"></span>
+					<h2>MULTI ROUND</h2>
+					<p><span>UCI-A2027</span><span>GRAY PINK</span><span>WAVE &amp; ROLL</span></p>
+				</a></li>
+				<li><a href="./product_sub05.html">
+					<span class="cround lb"></span>
+					<h2>BRUSH</h2>
+					<p><span>UCI-A2025</span><span>BLUE VIOLET</span><span>VOLUME</span></p>
+				</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+
+<script type="text/javascript">
+
+	/*
+	const inner = document.querySelector(".inner");
+	const section = document.querySelector("section");
+	window.onscroll = function() {
+	  let value = window.pageYOffset / section.offsetTop + 1;
+	  inner.style.transform = `scale(${value})`;
+	};
+	
+	var wHeight = $(window).height();
+	var imgnum = 1;
+	var scrollboxHeight = (wHeight)*imgnum;
+	//$(".promain .scrollbox").css("height",scrollboxHeight);
+	console.log(wHeight);
+
+	$(window).scroll(function(){
+		var scrollTop = $(window).scrollTop();
+		var scrollTop = parseInt(scrollTop*0.01);
+		console.log("t :"+scrollTop);
+
+	});	
+
+	var scrollimg = $(".promain img");
+	window.onscroll = function() {
+	  //let value = window.pageYOffset / scrollimg.offsetTop + 1;
+	  //$(".promain img").attr("src","./images/product/product_main_scrollimg_"+value+".png");
+	};
+	*/
+	/*
+	$(function(){
+		var d = false;
+		$("html, body").on('mousewheel DOMMouseScroll', function(e) {
+			var E = e.originalEvent;
+			delta = 0;
+			//console.log(E);
+			if (E.detail) {
+				delta = E.detail;
+				$('body').text(delta);
+			}else{
+				delta = E.wheelDelta;
+				$('body').text(delta);
+			};
+
+
+			if(delta < 0 && !d){
+				// 마우스 휠을 아래로 내렸을 경우
+				/*
+				d = true;
+				$('ul').stop().animate({
+					"left": a += -b
+				},400,function(){
+					d = false;
+				});
+				console.log("down");
+			};
+			if(delta > 0 && !d){
+				// 마우스 휠을 위로 올렸을 경우
+				/*
+				d = true;
+				$('ul').stop().animate({
+					"left": a += b
+				},400,function(){
+					d = false;
+				});
+				console.log("up");
+			 };
+
+		});
+	});*/
+
+	/*
+	function topmargin(){
+		var $window = $(window);        //Window object			
+		var scrollTime = 1.2;           //Scroll time
+		var scrollDistance = 170;       //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+			
+		$window.on("mousewheel DOMMouseScroll", function(event){
+			
+			event.preventDefault(); 
+											
+			var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+			var scrollTop = $window.scrollTop();
+			var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+			//console.log(finalScroll);
+			/*	
+			TweenMax.to($window, scrollTime, {
+				scrollTo : { y: finalScroll, autoKill:true },
+				ease: Power1.easeOut,   //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+				autoKill: true,
+				overwrite: 5                            
+			});
+						
+		});
+	}
+
+	$(document).ready(function() {	
+		topmargin();
+	});
+	*/
+
+
+
+	/*
+	$(function(){
+		
+		var $window = $(window);        //Window object
+		
+		var scrollTime = 1.2;           //Scroll time
+		var scrollDistance = 170;       //Distance. Use smaller value for shorter scroll and greater value for longer scroll
+			
+		$window.on("mousewheel DOMMouseScroll", function(event){
+			
+			event.preventDefault(); 
+											
+			var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+			var scrollTop = $window.scrollTop();
+			var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+				
+			TweenMax.to($window, scrollTime, {
+				scrollTo : { y: finalScroll, autoKill:true },
+					ease: Power1.easeOut,   //For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
+					autoKill: true,
+					overwrite: 5                            
+				});
+						
+		});
+		
+	});*/
+</script>
